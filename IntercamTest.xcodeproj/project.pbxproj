@@ -23,6 +23,9 @@
 		A69884D02C10E02B00170E90 /* IntercamTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884CF2C10E02B00170E90 /* IntercamTestUITestsLaunchTests.swift */; };
 		A69884E62C10F4CB00170E90 /* Coortinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884E52C10F4CB00170E90 /* Coortinator.swift */; };
 		A69884E82C10F54100170E90 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884E72C10F54100170E90 /* MainCoordinator.swift */; };
+		A69884EB2C11028900170E90 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A69884EA2C11028900170E90 /* Colors.xcassets */; };
+		A69884EE2C1102F900170E90 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884ED2C1102F900170E90 /* Color.swift */; };
+		A69884F12C1103A800170E90 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884F02C1103A800170E90 /* UIColor+Extension.swift */; };
 		A727A9391B56C4D61C6283AF /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F3CAEF94052A570E64B18 /* HomeInitializer.swift */; };
 		B71CEC4FE23443300A3BE53F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8891A7A3FBAC86663598FA /* HomePresenter.swift */; };
 		BE582FC929CE172EDA683138 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97056052DE5C34614943758B /* HomeConfigurator.swift */; };
@@ -74,6 +77,9 @@
 		A69884CF2C10E02B00170E90 /* IntercamTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntercamTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A69884E52C10F4CB00170E90 /* Coortinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coortinator.swift; sourceTree = "<group>"; };
 		A69884E72C10F54100170E90 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A69884EA2C11028900170E90 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A69884ED2C1102F900170E90 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A69884F02C1103A800170E90 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E11D6607565E34C18E264ABB /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
 		E5A7E7BED870277327F22A15 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
 		F46B01E4EB4BDB140C17F75C /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				A69884B52C10E02B00170E90 /* Assets.xcassets */,
+				A69884EA2C11028900170E90 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -256,7 +263,9 @@
 		A69884E32C10F4A900170E90 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A69884EF2C11039900170E90 /* Extension */,
 				A69884E42C10F4B900170E90 /* Coordinators */,
+				A69884ED2C1102F900170E90 /* Color.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -268,6 +277,14 @@
 				A69884E72C10F54100170E90 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A69884EF2C11039900170E90 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A69884F02C1103A800170E90 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		CE069F15FCCF88C12A19555F /* Presenter */ = {
@@ -394,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69884B62C10E02B00170E90 /* Assets.xcassets in Resources */,
+				A69884EB2C11028900170E90 /* Colors.xcassets in Resources */,
 				A69884B92C10E02B00170E90 /* Base in Resources */,
 				A69884B42C10E02900170E90 /* Base in Resources */,
 			);
@@ -421,6 +439,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69884E82C10F54100170E90 /* MainCoordinator.swift in Sources */,
+				A69884F12C1103A800170E90 /* UIColor+Extension.swift in Sources */,
+				A69884EE2C1102F900170E90 /* Color.swift in Sources */,
 				A69884E62C10F4CB00170E90 /* Coortinator.swift in Sources */,
 				A69884B12C10E02900170E90 /* ViewController.swift in Sources */,
 				A69884AD2C10E02900170E90 /* AppDelegate.swift in Sources */,
