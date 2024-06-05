@@ -13,7 +13,31 @@ class HomeViewController: UIViewController {
     
     // MARK: Views
     
-    @IBOutlet weak var exampleLabel: UILabel!
+    @IBOutlet weak var airportTitleLabel: UILabel!
+    
+    @IBOutlet weak var finderSubTitleLabel: UILabel!
+    
+    @IBOutlet weak var numberKilometersLabel: UILabel! {
+        didSet {
+            numberKilometersLabel.textColor = Color.grayIntercam
+            
+        }
+    }
+    
+    @IBOutlet weak var numberKilometersSlider: UISlider!
+    
+    @IBOutlet weak var radiusLabel: UILabel! {
+        didSet {
+            radiusLabel.textColor = Color.grayIntercam
+        }
+    }
+    
+    @IBOutlet weak var searchButton: UIButton! {
+        didSet {
+            searchButton.backgroundColor = Color.blueIntercam
+            searchButton.layer.cornerRadius = 12
+        }
+    }
     
     
     // MARK: Properties
@@ -35,7 +59,37 @@ class HomeViewController: UIViewController {
     // MARK: Functions
     
     private func setupUI() {
-        exampleLabel.text = "Hola"
+        
+        custom(my: airportTitleLabel)
+        custom(my: finderSubTitleLabel)
+    }
+    
+    private func custom(my label: UILabel) {
+        
+        // Aplicar los colores y borde
+        let attributedText = NSMutableAttributedString(string: label.text ?? "")
+        
+        // Añadir borde azul
+        attributedText.addAttribute(NSAttributedString.Key.strokeColor, 
+                                    value: Color.grayIntercam,
+                                    range: NSRange(location: 0,
+                                                   length: attributedText.length))
+        attributedText.addAttribute(NSAttributedString.Key.strokeWidth, 
+                                    value: -2.0,
+                                    range: NSRange(location: 0,
+                                                   length: attributedText.length))
+        
+        // Colorear el texto en blanco
+        attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.white, range: NSRange(location: 0, length: attributedText.length))
+        
+        label.attributedText = attributedText
+    }
+    
+    
+    // MARK: Actions
+    
+    @IBAction func searchAction(_ sender: Any) {
+        print("test search button")
     }
 }
 
