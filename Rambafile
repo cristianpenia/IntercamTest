@@ -1,0 +1,25 @@
+### Headers settings
+company: IntercamTest
+
+### Xcode project settings
+project_name: IntercamTest
+xcodeproj_path: IntercamTest.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: IntercamTest
+
+# The file path for new modules
+project_file_path: IntercamTest/Screens/Front/[NAME_MODULE]
+
+# The Xcode group path to new modules
+project_group_path: IntercamTest/Screens/Front/[NAME_MODULE]
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}
+
+## COMMAND  
+# generamba gen [NAME] swifty_viper
