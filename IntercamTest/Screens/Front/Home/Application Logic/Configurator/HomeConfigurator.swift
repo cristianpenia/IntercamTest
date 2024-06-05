@@ -17,7 +17,7 @@ class HomeModuleConfigurator {
         }
     }
 
-    private func configure(viewController: HomeViewController) {
+    func configure(viewController: HomeViewController) {
 
         let router = HomeRouter()
 

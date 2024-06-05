@@ -10,8 +10,12 @@ import UIKit
 
 class HomeModuleInitializer: NSObject {
     
+    
+    // MARK: Views
+    
     @IBOutlet weak var homeViewController: HomeViewController!
 
+    
     override func awakeFromNib() {
 
         let configurator = HomeModuleConfigurator()

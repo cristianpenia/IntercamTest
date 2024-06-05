@@ -9,7 +9,15 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    
+    // MARK: Views
+    
+    @IBOutlet weak var exampleLabel: UILabel!
+    
+    
+    // MARK: Properties
+    
     var output: HomeViewOutput!
 
     
@@ -17,7 +25,17 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+        
         output.viewIsReady()
+    }
+    
+    
+    // MARK: Functions
+    
+    private func setupUI() {
+        exampleLabel.text = "Hola"
     }
 }
 
