@@ -20,7 +20,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var numberKilometersLabel: UILabel! {
         didSet {
             numberKilometersLabel.textColor = Color.grayIntercam
-            
         }
     }
     
@@ -66,10 +65,8 @@ class HomeViewController: UIViewController {
     
     private func custom(my label: UILabel) {
         
-        // Aplicar los colores y borde
         let attributedText = NSMutableAttributedString(string: label.text ?? "")
         
-        // Añadir borde azul
         attributedText.addAttribute(NSAttributedString.Key.strokeColor, 
                                     value: Color.grayIntercam,
                                     range: NSRange(location: 0,
@@ -79,8 +76,10 @@ class HomeViewController: UIViewController {
                                     range: NSRange(location: 0,
                                                    length: attributedText.length))
         
-        // Colorear el texto en blanco
-        attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.white, range: NSRange(location: 0, length: attributedText.length))
+        attributedText.addAttribute(NSAttributedString.Key.foregroundColor, 
+                                    value: UIColor.white,
+                                    range: NSRange(location: 0,
+                                                   length: attributedText.length))
         
         label.attributedText = attributedText
     }
