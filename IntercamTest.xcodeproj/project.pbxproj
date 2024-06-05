@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A69884DE2C10E0E400170E90 /* AppSettings */,
-				A69884DD2C10E0DF00170E90 /* Front */,
+				A69884DD2C10E0DF00170E90 /* Screens */,
 				A69884DC2C10E0D900170E90 /* Resources */,
 			);
 			path = IntercamTest;
@@ -131,13 +131,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A69884DD2C10E0DF00170E90 /* Front */ = {
+		A69884DD2C10E0DF00170E90 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				A69884DF2C10E11E00170E90 /* Storyboards */,
+				A69884E02C10E5F000170E90 /* Front */,
 				A69884B02C10E02900170E90 /* ViewController.swift */,
 			);
-			path = Front;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		A69884DE2C10E0E400170E90 /* AppSettings */ = {
@@ -153,10 +154,17 @@
 		A69884DF2C10E11E00170E90 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				A69884B22C10E02900170E90 /* Main.storyboard */,
 				A69884B72C10E02B00170E90 /* LaunchScreen.storyboard */,
+				A69884B22C10E02900170E90 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A69884E02C10E5F000170E90 /* Front */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Front;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
