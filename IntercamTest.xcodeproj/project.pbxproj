@@ -485,6 +485,8 @@
 				DEVELOPMENT_TEAM = ZJJ275SY3R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntercamTest/AppSettings/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Aeropuertos;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -514,6 +516,8 @@
 				DEVELOPMENT_TEAM = ZJJ275SY3R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntercamTest/AppSettings/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Aeropuertos;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
