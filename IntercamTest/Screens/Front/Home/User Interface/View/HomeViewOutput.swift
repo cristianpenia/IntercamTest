@@ -7,11 +7,5 @@
 //
 
 protocol HomeViewOutput {
-
-    /**
-        @author Cristian Peña
-        Notify presenter that view is ready
-    */
-
     func viewIsReady()
 }

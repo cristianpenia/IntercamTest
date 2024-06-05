@@ -8,18 +8,23 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, HomeViewInput {
+class HomeViewController: UIViewController {
 
     var output: HomeViewOutput!
 
+    
     // MARK: Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
+}
 
 
-    // MARK: HomeViewInput
-    func setupInitialState() {
-    }
+// MARK: HomeViewInput
+
+extension HomeViewController: HomeViewInput {
+    
+    func setupInitialState() {}
 }

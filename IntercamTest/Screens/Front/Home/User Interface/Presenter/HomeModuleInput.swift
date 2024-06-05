@@ -6,6 +6,4 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-protocol HomeModuleInput: class {
-
-}
+protocol HomeModuleInput: AnyObject {}

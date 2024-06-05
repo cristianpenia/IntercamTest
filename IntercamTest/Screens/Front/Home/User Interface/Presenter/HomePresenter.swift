@@ -12,7 +12,5 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     var interactor: HomeInteractorInput!
     var router: HomeRouterInput!
 
-    func viewIsReady() {
-
-    }
+    func viewIsReady() {}
 }

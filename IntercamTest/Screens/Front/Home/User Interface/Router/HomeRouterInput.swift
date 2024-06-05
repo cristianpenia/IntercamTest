@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol HomeRouterInput {
-
-}
+protocol HomeRouterInput {}

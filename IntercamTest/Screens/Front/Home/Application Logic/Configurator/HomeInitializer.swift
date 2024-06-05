@@ -9,8 +9,7 @@
 import UIKit
 
 class HomeModuleInitializer: NSObject {
-
-    //Connect with object on storyboard
+    
     @IBOutlet weak var homeViewController: HomeViewController!
 
     override func awakeFromNib() {

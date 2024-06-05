@@ -6,12 +6,7 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-protocol HomeViewInput: class {
-
-    /**
-        @author Cristian Peña
-        Setup initial state of the view
-    */
+protocol HomeViewInput: AnyObject {
 
     func setupInitialState()
 }
