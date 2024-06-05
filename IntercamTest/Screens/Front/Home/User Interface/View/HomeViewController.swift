@@ -23,7 +23,13 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var numberKilometersSlider: UISlider!
+    @IBOutlet weak var numberKilometersSlider: UISlider! {
+        didSet {
+            numberKilometersSlider.minimumValue = 1
+            numberKilometersSlider.maximumValue = 100
+            numberKilometersSlider.value = 5
+        }
+    }
     
     @IBOutlet weak var radiusLabel: UILabel! {
         didSet {
@@ -87,9 +93,12 @@ class HomeViewController: UIViewController {
     
     // MARK: Actions
     
-    @IBAction func searchAction(_ sender: Any) {
-        print("test search button")
+    @IBAction func sliderAction(_ sender: UISlider) {
+        let currentValue = Int(sender.value)
+        numberKilometersLabel.text = "\(currentValue)"
     }
+    
+    @IBAction func searchAction(_ sender: Any) {}
 }
 
 
