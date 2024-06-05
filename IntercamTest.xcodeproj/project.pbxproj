@@ -140,9 +140,9 @@
 		A691DC0E4D99D2E876F08D47 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				6CB4744502F5EF99732C1654 /* HomeInteractor.swift */,
 				E5A7E7BED870277327F22A15 /* HomeInteractorInput.swift */,
 				509E23C5E43C3A6EF64E2C65 /* HomeInteractorOutput.swift */,
-				6CB4744502F5EF99732C1654 /* HomeInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";

@@ -9,5 +9,7 @@
 import Foundation
 
 protocol HomeInteractorOutput: AnyObject {
-
+    
+    func didGetAirports()
+    func didFailGettingAirports(title: String, message: String)
 }

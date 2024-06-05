@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         didSet {
             numberKilometersSlider.minimumValue = 1
             numberKilometersSlider.maximumValue = 100
-            numberKilometersSlider.value = 5
+            numberKilometersSlider.value = Float(range)
         }
     }
     
@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
     // MARK: Properties
     
     var output: HomeViewOutput!
-
+    var range: Int = 5
     
     // MARK: Life cycle
     
@@ -94,11 +94,13 @@ class HomeViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func sliderAction(_ sender: UISlider) {
-        let currentValue = Int(sender.value)
-        numberKilometersLabel.text = "\(currentValue)"
+        range = Int(sender.value)
+        numberKilometersLabel.text = "\(range)"
     }
     
-    @IBAction func searchAction(_ sender: Any) {}
+    @IBAction func searchAction(_ sender: Any) {
+        output.searchAirportIn(range)
+    }
 }
 
 

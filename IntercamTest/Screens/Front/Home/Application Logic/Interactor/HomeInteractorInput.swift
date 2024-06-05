@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HomeInteractorInput {
-
+    func getAirports(with latitude: Float,and longitude: Float)
 }

@@ -7,7 +7,17 @@
 //
 
 class HomeInteractor: HomeInteractorInput {
-
+   
+    
+    // MARK: Properties
+    
     weak var output: HomeInteractorOutput!
 
+    func getAirports(with latitude: Float, and longitude: Float) {
+        if true {
+            output.didGetAirports()
+        } else {
+            output.didFailGettingAirports(title: "ocurrio un fallo", message: "porque no se enviaron los datos en la manera correcta")
+        }
+    }
 }

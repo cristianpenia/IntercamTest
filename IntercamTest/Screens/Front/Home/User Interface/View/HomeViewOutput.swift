@@ -8,4 +8,5 @@
 
 protocol HomeViewOutput {
     func viewIsReady()
+    func searchAirportIn(_ range: Int)
 }
