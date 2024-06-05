@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol HomeRouterInput {}
+protocol HomeRouterInput {
+    func routeToListAirports(list: [Int])
+}

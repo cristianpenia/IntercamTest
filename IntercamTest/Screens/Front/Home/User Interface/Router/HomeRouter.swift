@@ -6,4 +6,7 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-class HomeRouter: HomeRouterInput {}
+class HomeRouter: HomeRouterInput {
+    
+    func routeToListAirports(list: [Int]) {}
+}

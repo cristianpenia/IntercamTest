@@ -10,6 +10,6 @@ import Foundation
 
 protocol HomeInteractorOutput: AnyObject {
     
-    func didGetAirports()
+    func didGetAirports(list: [Int])
     func didFailGettingAirports(title: String, message: String)
 }

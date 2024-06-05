@@ -15,7 +15,7 @@ class HomeInteractor: HomeInteractorInput {
 
     func getAirports(with latitude: Float, and longitude: Float) {
         if true {
-            output.didGetAirports()
+            output.didGetAirports(list: Array(1...10))
         } else {
             output.didFailGettingAirports(title: "ocurrio un fallo", message: "porque no se enviaron los datos en la manera correcta")
         }

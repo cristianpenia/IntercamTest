@@ -28,8 +28,9 @@ extension HomePresenter: HomeViewOutput {
 
 extension HomePresenter: HomeInteractorOutput {
     
-    func didGetAirports() {
+    func didGetAirports(list: [Int]) {
         // TODO: una vez obtenida la repuesta exitosa mandamos la informacion por router
+        router.routeToListAirports(list: list)
     }
     
     func didFailGettingAirports(title: String, message: String) {
