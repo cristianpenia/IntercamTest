@@ -7,11 +7,29 @@
 //
 
 class HomeInteractor: HomeInteractorInput {
-   
+    
     
     // MARK: Properties
     
     weak var output: HomeInteractorOutput!
+    let locationService: LocationService
+    
+    
+    init(locationService: LocationService) {
+        self.locationService = locationService
+    }
+    
+    func getLocation() {
+        locationService.getCurrentLocation { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let location):
+                self.output.didGetLocation(location)
+            case .failure(let failure):
+                self.output.didFailGettingLocation(title: "ERROR", message: "Ocurrio un error inesperado al obtener la localización")
+            }
+        }
+    }
 
     func getAirports(with latitude: Float, and longitude: Float) {
         if true {

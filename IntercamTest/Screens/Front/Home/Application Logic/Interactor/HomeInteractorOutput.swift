@@ -6,10 +6,12 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-import Foundation
+import CoreLocation
 
 protocol HomeInteractorOutput: AnyObject {
     
+    func didGetLocation(_ location: CLLocation)
+    func didFailGettingLocation(title: String, message: String)
     func didGetAirports(list: [Int])
     func didFailGettingAirports(title: String, message: String)
 }
