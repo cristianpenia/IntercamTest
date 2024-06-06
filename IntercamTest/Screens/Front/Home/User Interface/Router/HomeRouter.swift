@@ -8,5 +8,7 @@
 
 class HomeRouter: HomeRouterInput {
     
-    func routeToListAirports(list: [Int]) {}
+    func routeToListAirports(list: AirportsResponse) {
+        
+    }
 }

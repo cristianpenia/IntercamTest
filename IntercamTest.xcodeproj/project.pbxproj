@@ -28,6 +28,13 @@
 		A69884F12C1103A800170E90 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884F02C1103A800170E90 /* UIColor+Extension.swift */; };
 		A69884F42C112EC400170E90 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884F32C112EC400170E90 /* LocationServiceDelegate.swift */; };
 		A69884F62C112EDC00170E90 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884F52C112EDC00170E90 /* LocationService.swift */; };
+		A69884F92C12006700170E90 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A69884F82C12006700170E90 /* Alamofire */; };
+		A69884FC2C1216A400170E90 /* AirportsSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = A69884FB2C1216A400170E90 /* AirportsSuccess.json */; };
+		A69884FE2C1216BB00170E90 /* AirportsFailed.json in Resources */ = {isa = PBXBuildFile; fileRef = A69884FD2C1216BB00170E90 /* AirportsFailed.json */; };
+		A69885022C12360200170E90 /* AirportsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885012C12360200170E90 /* AirportsResponse.swift */; };
+		A69885042C12363100170E90 /* DataAirports.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885032C12363100170E90 /* DataAirports.swift */; };
+		A69885062C12364700170E90 /* Airpord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885052C12364700170E90 /* Airpord.swift */; };
+		A69885082C1236CD00170E90 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885072C1236CD00170E90 /* MockURLProtocol.swift */; };
 		A727A9391B56C4D61C6283AF /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F3CAEF94052A570E64B18 /* HomeInitializer.swift */; };
 		B71CEC4FE23443300A3BE53F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8891A7A3FBAC86663598FA /* HomePresenter.swift */; };
 		BE582FC929CE172EDA683138 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97056052DE5C34614943758B /* HomeConfigurator.swift */; };
@@ -84,6 +91,12 @@
 		A69884F02C1103A800170E90 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A69884F32C112EC400170E90 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
 		A69884F52C112EDC00170E90 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		A69884FB2C1216A400170E90 /* AirportsSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AirportsSuccess.json; sourceTree = "<group>"; };
+		A69884FD2C1216BB00170E90 /* AirportsFailed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AirportsFailed.json; sourceTree = "<group>"; };
+		A69885012C12360200170E90 /* AirportsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsResponse.swift; sourceTree = "<group>"; };
+		A69885032C12363100170E90 /* DataAirports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAirports.swift; sourceTree = "<group>"; };
+		A69885052C12364700170E90 /* Airpord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airpord.swift; sourceTree = "<group>"; };
+		A69885072C1236CD00170E90 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		E11D6607565E34C18E264ABB /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
 		E5A7E7BED870277327F22A15 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
 		F46B01E4EB4BDB140C17F75C /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -94,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69884F92C12006700170E90 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +161,7 @@
 				6CB4744502F5EF99732C1654 /* HomeInteractor.swift */,
 				E5A7E7BED870277327F22A15 /* HomeInteractorInput.swift */,
 				509E23C5E43C3A6EF64E2C65 /* HomeInteractorOutput.swift */,
+				A69885072C1236CD00170E90 /* MockURLProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -202,6 +217,7 @@
 		A69884DC2C10E0D900170E90 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A69884FA2C12164300170E90 /* JSONs */,
 				A69884B52C10E02B00170E90 /* Assets.xcassets */,
 				A69884EA2C11028900170E90 /* Colors.xcassets */,
 			);
@@ -248,6 +264,7 @@
 		A69884E12C10F1C000170E90 /* Application Logic */ = {
 			isa = PBXGroup;
 			children = (
+				A69884FF2C1235E900170E90 /* Entity */,
 				A691DC0E4D99D2E876F08D47 /* Interactor */,
 				368902F099FF739794EE5721 /* Configurator */,
 			);
@@ -301,6 +318,33 @@
 			path = Geolocation;
 			sourceTree = "<group>";
 		};
+		A69884FA2C12164300170E90 /* JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				A69884FB2C1216A400170E90 /* AirportsSuccess.json */,
+				A69884FD2C1216BB00170E90 /* AirportsFailed.json */,
+			);
+			path = JSONs;
+			sourceTree = "<group>";
+		};
+		A69884FF2C1235E900170E90 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A69885002C1235F000170E90 /* External */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A69885002C1235F000170E90 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				A69885012C12360200170E90 /* AirportsResponse.swift */,
+				A69885032C12363100170E90 /* DataAirports.swift */,
+				A69885052C12364700170E90 /* Airpord.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
 		CE069F15FCCF88C12A19555F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +380,9 @@
 			dependencies = (
 			);
 			name = IntercamTest;
+			packageProductDependencies = (
+				A69884F82C12006700170E90 /* Alamofire */,
+			);
 			productName = IntercamTest;
 			productReference = A69884A92C10E02900170E90 /* IntercamTest.app */;
 			productType = "com.apple.product-type.application";
@@ -408,6 +455,9 @@
 				Base,
 			);
 			mainGroup = A69884A02C10E02900170E90;
+			packageReferences = (
+				A69884F72C12006700170E90 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A69884AA2C10E02900170E90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -427,7 +477,9 @@
 				A69884B62C10E02B00170E90 /* Assets.xcassets in Resources */,
 				A69884EB2C11028900170E90 /* Colors.xcassets in Resources */,
 				A69884B92C10E02B00170E90 /* Base in Resources */,
+				A69884FE2C1216BB00170E90 /* AirportsFailed.json in Resources */,
 				A69884B42C10E02900170E90 /* Base in Resources */,
+				A69884FC2C1216A400170E90 /* AirportsSuccess.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +506,7 @@
 			files = (
 				A69884E82C10F54100170E90 /* MainCoordinator.swift in Sources */,
 				A69884F12C1103A800170E90 /* UIColor+Extension.swift in Sources */,
+				A69885082C1236CD00170E90 /* MockURLProtocol.swift in Sources */,
 				A69884F42C112EC400170E90 /* LocationServiceDelegate.swift in Sources */,
 				A69884EE2C1102F900170E90 /* Color.swift in Sources */,
 				A69884E62C10F4CB00170E90 /* Coortinator.swift in Sources */,
@@ -461,6 +514,7 @@
 				A69884AD2C10E02900170E90 /* AppDelegate.swift in Sources */,
 				A69884AF2C10E02900170E90 /* SceneDelegate.swift in Sources */,
 				C8F768F987B13721627F6C4F /* HomeViewInput.swift in Sources */,
+				A69885062C12364700170E90 /* Airpord.swift in Sources */,
 				E43C5EA482A45BA84EFF7B11 /* HomeViewOutput.swift in Sources */,
 				9486D53C83EDDA709733D3C9 /* HomeViewController.swift in Sources */,
 				51524CBCA2C9598401B2F774 /* HomeModuleInput.swift in Sources */,
@@ -470,7 +524,9 @@
 				D1ADEFFE7BFB7D70EB3D93CC /* HomeInteractor.swift in Sources */,
 				5E405CE07593BBED9E5E41F3 /* HomeRouterInput.swift in Sources */,
 				6AEF7882E132317BB44075FD /* HomeRouter.swift in Sources */,
+				A69885022C12360200170E90 /* AirportsResponse.swift in Sources */,
 				A69884F62C112EDC00170E90 /* LocationService.swift in Sources */,
+				A69885042C12363100170E90 /* DataAirports.swift in Sources */,
 				BE582FC929CE172EDA683138 /* HomeConfigurator.swift in Sources */,
 				A727A9391B56C4D61C6283AF /* HomeInitializer.swift in Sources */,
 			);
@@ -825,6 +881,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A69884F72C12006700170E90 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A69884F82C12006700170E90 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A69884F72C12006700170E90 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A69884A12C10E02900170E90 /* Project object */;
 }

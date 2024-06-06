@@ -1,0 +1,7 @@
+{
+    "status": "success",
+    "data": {
+        "title": "Ocurrio un error",
+        "message": "La consulta de los aeropuertos no se pudo concretar"
+    }
+}

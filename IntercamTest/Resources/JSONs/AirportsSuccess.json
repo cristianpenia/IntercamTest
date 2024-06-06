@@ -1,0 +1,48 @@
+{
+    "status": "success",
+    "data": {
+        "airpords": [
+            {
+                "ident": "MMJC",
+                "type": "small_airport",
+                "name": "Atizapan de Zaragoza Airport",
+                "latitude_deg": 19.5748,
+                "longitude_deg": -99.288803,
+                "elevation_ft": 8120,
+                "continent": "NA",
+                "iso_country": "MX",
+                "iso_region": "MX-MEX",
+                "municipality": "",
+                "scheduled_service": "no",
+                "gps_code": "MMJC",
+                "iata_code": "AZP",
+                "local_code": "JJC",
+                "home_link": "",
+                "wikipedia_link": "https://es.wikipedia.org/wiki/Aeropuerto_Nacional_Jorge_Jiménez_Cantú",
+                "keywords": "Jorge Jiménez Cantú",
+                "icao_code": "MMJC"
+            },
+            {
+                "ident": "MMCB",
+                "type": "medium_airport",
+                "name": "General Mariano Matamoros (Cuernavaca) Airport",
+                "latitude_deg": 18.834801,
+                "longitude_deg": -99.261299,
+                "elevation_ft": 4277,
+                "continent": "NA",
+                "iso_country": "MX",
+                "iso_region": "MX-MOR",
+                "municipality": "Temixco",
+                "scheduled_service": "yes",
+                "gps_code": "MMCB",
+                "iata_code": "CVJ",
+                "local_code": "",
+                "home_link": "",
+                "wikipedia_link": "https://en.wikipedia.org/wiki/General_Mariano_Matamoros_Airport",
+                "keywords": "",
+                "icao_code": "MMCB"
+            }
+        ]
+    }
+}
+

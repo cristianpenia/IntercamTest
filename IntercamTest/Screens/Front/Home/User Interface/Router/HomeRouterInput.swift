@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HomeRouterInput {
-    func routeToListAirports(list: [Int])
+    func routeToListAirports(list: AirportsResponse)
 }

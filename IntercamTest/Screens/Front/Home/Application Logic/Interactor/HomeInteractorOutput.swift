@@ -12,6 +12,6 @@ protocol HomeInteractorOutput: AnyObject {
     
     func didGetLocation(_ location: CLLocation)
     func didFailGettingLocation(title: String, message: String)
-    func didGetAirports(list: [Int])
+    func didGetAirports(list: AirportsResponse)
     func didFailGettingAirports(title: String, message: String)
 }

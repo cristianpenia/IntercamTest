@@ -10,5 +10,5 @@ import Foundation
 
 protocol HomeInteractorInput {
     func getLocation()
-    func getAirports(with latitude: Double,and longitude: Double)
+    func getAirports(with latitude: Double, and longitude: Double, in range: Int)
 }
