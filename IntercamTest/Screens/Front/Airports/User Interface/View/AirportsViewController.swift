@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AirportsViewController: UIViewController, AirportsViewInput {
+class AirportsViewController: UITabBarController, AirportsViewInput {
 
     var output: AirportsViewOutput!
 
