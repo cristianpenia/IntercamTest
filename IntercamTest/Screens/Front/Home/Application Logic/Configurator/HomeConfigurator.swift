@@ -20,6 +20,7 @@ class HomeModuleConfigurator {
     func configure(viewController: HomeViewController) {
 
         let router = HomeRouter()
+        router.view = viewController
         let locationService = LocationService()
 
         let presenter = HomePresenter()

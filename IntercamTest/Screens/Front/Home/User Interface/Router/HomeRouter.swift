@@ -6,9 +6,24 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-class HomeRouter: HomeRouterInput {
+import UIKit
+
+class HomeRouter: HomeRouterInput, Routable {
+    
+    weak var view: HomeViewController!
     
     func routeToListAirports(list: AirportsResponse) {
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        pushViewController(withIdentifer: "AirportsViewController",
+                           type: AirportsViewController.self,
+                           in: storyboard,
+                           from: view) { airports in
+            
+            let configurator = AirportsModuleConfigurator()
+            
+            configurator.configure(viewController: airports )
+        }
     }
 }

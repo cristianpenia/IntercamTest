@@ -93,10 +93,13 @@ class HomeInteractor: HomeInteractorInput {
                     
                 dump(airportsResponse)
                 
-                output.didGetAirports(list: airportsResponse)
-                
+                DispatchQueue.main.async {
+                    self.output.didGetAirports(list: airportsResponse)
+                }
             } catch {
-                output.didFailGettingAirports(title: titleFail, message: self.messageFail)
+                DispatchQueue.main.async {
+                    self.output.didFailGettingAirports(title: titleFail, message: self.messageFail)
+                }
             }
         }
         task.resume()
@@ -107,6 +110,7 @@ class HomeInteractor: HomeInteractorInput {
 
 
 extension HomeInteractor {
+    
     func loadJSONFromFile(named fileName: String) -> Data {
         guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else {
             fatalError("JSON file not found")

@@ -125,8 +125,24 @@
                     <view key="view" contentMode="scaleToFill" id="J8m-3X-S8Y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="second view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xak-nT-D3I">
+                                <rect key="frame" x="149" y="415.66666666666669" width="95" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="FQY-jn-6Pt"/>
+                                    <constraint firstAttribute="height" constant="21" id="MJe-V3-okf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qge-qY-o0f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xak-nT-D3I" firstAttribute="centerX" secondItem="J8m-3X-S8Y" secondAttribute="centerX" id="DwU-mS-fM8"/>
+                            <constraint firstItem="xak-nT-D3I" firstAttribute="centerY" secondItem="J8m-3X-S8Y" secondAttribute="centerY" id="PW1-kZ-9eo"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Qw-0d-E5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

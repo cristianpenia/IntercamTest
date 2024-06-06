@@ -41,6 +41,7 @@
 		A69885042C12363100170E90 /* DataAirports.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885032C12363100170E90 /* DataAirports.swift */; };
 		A69885062C12364700170E90 /* Airpord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885052C12364700170E90 /* Airpord.swift */; };
 		A69885082C1236CD00170E90 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885072C1236CD00170E90 /* MockURLProtocol.swift */; };
+		A698850D2C12447700170E90 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A698850C2C12447700170E90 /* Routable.swift */; };
 		A727A9391B56C4D61C6283AF /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F3CAEF94052A570E64B18 /* HomeInitializer.swift */; };
 		B71CEC4FE23443300A3BE53F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8891A7A3FBAC86663598FA /* HomePresenter.swift */; };
 		BE582FC929CE172EDA683138 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97056052DE5C34614943758B /* HomeConfigurator.swift */; };
@@ -112,6 +113,7 @@
 		A69885032C12363100170E90 /* DataAirports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAirports.swift; sourceTree = "<group>"; };
 		A69885052C12364700170E90 /* Airpord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airpord.swift; sourceTree = "<group>"; };
 		A69885072C1236CD00170E90 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		A698850C2C12447700170E90 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		A87B3B69F7CB8D57A57B1E47 /* AirportsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AirportsViewInput.swift; sourceTree = "<group>"; };
 		ABFC9EB335826DBE30546D8E /* AirportsInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AirportsInteractorOutput.swift; sourceTree = "<group>"; };
 		B2EF9AFF67E72AE2AC453596 /* AirportsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AirportsInteractor.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				A69884EF2C11039900170E90 /* Extension */,
 				A69884E42C10F4B900170E90 /* Coordinators */,
 				A69884ED2C1102F900170E90 /* Color.swift */,
+				A698850C2C12447700170E90 /* Routable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -383,6 +386,25 @@
 			path = External;
 			sourceTree = "<group>";
 		};
+		A69885092C1242C500170E90 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				A8673EE9E56E0F079ED32D15 /* Interactor */,
+				9FBEEB7EF39F46C2058A1235 /* Configurator */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		A698850A2C1242D000170E90 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				ED90FC061DABA094C71304D7 /* View */,
+				3DA9CB85AC2506A3E13F78E4 /* Presenter */,
+				CB2D0228875739E872AD18DC /* Router */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
 		A8673EE9E56E0F079ED32D15 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,11 +456,8 @@
 		FE3CAD922C91A5F3037D553B /* Airports */ = {
 			isa = PBXGroup;
 			children = (
-				ED90FC061DABA094C71304D7 /* View */,
-				3DA9CB85AC2506A3E13F78E4 /* Presenter */,
-				A8673EE9E56E0F079ED32D15 /* Interactor */,
-				CB2D0228875739E872AD18DC /* Router */,
-				9FBEEB7EF39F46C2058A1235 /* Configurator */,
+				A69885092C1242C500170E90 /* Application Logic */,
+				A698850A2C1242D000170E90 /* User Interface */,
 			);
 			path = Airports;
 			sourceTree = "<group>";
@@ -586,6 +605,7 @@
 				A69884F12C1103A800170E90 /* UIColor+Extension.swift in Sources */,
 				A69885082C1236CD00170E90 /* MockURLProtocol.swift in Sources */,
 				A69884F42C112EC400170E90 /* LocationServiceDelegate.swift in Sources */,
+				A698850D2C12447700170E90 /* Routable.swift in Sources */,
 				A69884EE2C1102F900170E90 /* Color.swift in Sources */,
 				A69884E62C10F4CB00170E90 /* Coortinator.swift in Sources */,
 				A69884AD2C10E02900170E90 /* AppDelegate.swift in Sources */,

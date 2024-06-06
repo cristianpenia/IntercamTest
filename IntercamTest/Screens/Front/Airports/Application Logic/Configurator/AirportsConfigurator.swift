@@ -17,7 +17,7 @@ class AirportsModuleConfigurator {
         }
     }
 
-    private func configure(viewController: AirportsViewController) {
+    func configure(viewController: AirportsViewController) {
 
         let router = AirportsRouter()
 
