@@ -91,6 +91,8 @@ class HomeInteractor: HomeInteractorInput {
                         
                 let airportsResponse = try decoder.decode(AirportsResponse.self, from: data)
                     
+                dump(airportsResponse)
+                
                 output.didGetAirports(list: airportsResponse)
                 
             } catch {
@@ -103,9 +105,8 @@ class HomeInteractor: HomeInteractorInput {
 
 }
 
+
 extension HomeInteractor {
-    
-    
     func loadJSONFromFile(named fileName: String) -> Data {
         guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else {
             fatalError("JSON file not found")
@@ -123,5 +124,4 @@ extension HomeInteractor {
         configuration.protocolClasses = [MockURLProtocol.self]
         return URLSession(configuration: configuration)
     }
-
 }
