@@ -25,13 +25,14 @@ class HomeInteractor: HomeInteractorInput {
             switch result {
             case .success(let location):
                 self.output.didGetLocation(location)
-            case .failure(let failure):
+                
+            case .failure( _):
                 self.output.didFailGettingLocation(title: "ERROR", message: "Ocurrio un error inesperado al obtener la localización")
             }
         }
     }
 
-    func getAirports(with latitude: Float, and longitude: Float) {
+    func getAirports(with latitude: Double, and longitude: Double) {
         if true {
             output.didGetAirports(list: Array(1...10))
         } else {

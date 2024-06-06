@@ -31,7 +31,10 @@ extension HomePresenter: HomeInteractorOutput {
     
     func didGetLocation(_ location: CLLocation) {
         // TODO: con las coordenadas solicitar el servicio
-        interactor.getAirports(with: 1.1, and: 2.2)
+        let latitud = location.coordinate.latitude
+        let longitud = location.coordinate.longitude
+        print("latitud \(latitud), longitud \(longitud)")
+        interactor.getAirports(with: latitud, and: longitud)
     }
     
     func didFailGettingLocation(title: String, message: String) {
