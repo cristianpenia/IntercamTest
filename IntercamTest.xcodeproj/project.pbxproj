@@ -40,6 +40,7 @@
 		A67BE7FA2C129489006E98B3 /* AirportInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67BE7F92C129489006E98B3 /* AirportInformationTableViewCell.swift */; };
 		A67BE8002C12A553006E98B3 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67BE7FF2C12A553006E98B3 /* UIViewController+Extension.swift */; };
 		A67BE8022C12AF96006E98B3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A67BE8012C12AF96006E98B3 /* SnapKit */; };
+		A67BE8052C12B203006E98B3 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67BE8042C12B203006E98B3 /* LoaderView.swift */; };
 		A69884AD2C10E02900170E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884AC2C10E02900170E90 /* AppDelegate.swift */; };
 		A69884AF2C10E02900170E90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884AE2C10E02900170E90 /* SceneDelegate.swift */; };
 		A69884B42C10E02900170E90 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A69884B32C10E02900170E90 /* Base */; };
@@ -131,6 +132,7 @@
 		A3B39943589051D42B636189 /* ShowListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShowListInteractor.swift; sourceTree = "<group>"; };
 		A67BE7F92C129489006E98B3 /* AirportInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportInformationTableViewCell.swift; sourceTree = "<group>"; };
 		A67BE7FF2C12A553006E98B3 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		A67BE8042C12B203006E98B3 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		A69884A92C10E02900170E90 /* IntercamTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntercamTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69884AC2C10E02900170E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A69884AE2C10E02900170E90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +315,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A67BE8032C12B1F2006E98B3 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				A67BE8042C12B203006E98B3 /* LoaderView.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		A691DC0E4D99D2E876F08D47 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +394,7 @@
 		A69884DD2C10E0DF00170E90 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A67BE8032C12B1F2006E98B3 /* Loader */,
 				A69884DF2C10E11E00170E90 /* Storyboards */,
 				A69884E02C10E5F000170E90 /* Front */,
 			);
@@ -848,6 +859,7 @@
 				FCD78B29888EDD076358E7A5 /* AirportsViewInput.swift in Sources */,
 				0BFC5B6DA55B97C61BD848C9 /* AirportsViewOutput.swift in Sources */,
 				10BD8E2BD7777A495884FB39 /* AirportsViewController.swift in Sources */,
+				A67BE8052C12B203006E98B3 /* LoaderView.swift in Sources */,
 				E209BEE8BB83AA6E89927F15 /* AirportsModuleInput.swift in Sources */,
 				DB9BA704DD2F7E714D4DA3B2 /* AirportsPresenter.swift in Sources */,
 				897D01AB66D5E6A17B55F339 /* AirportsInteractorInput.swift in Sources */,

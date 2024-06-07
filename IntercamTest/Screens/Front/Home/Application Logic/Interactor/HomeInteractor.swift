@@ -76,37 +76,39 @@ class HomeInteractor: HomeInteractorInput {
         
         print("\n\n\(url)\n\n")
         
-        let task = session.dataTask(with: url) { [self] data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                return
-            }
-            
-            guard let data = data else {
-                print("No data")
-                return
-            }
-            
-            
-            do {
-                let decoder = JSONDecoder()
-                        
-                let airportsResponse = try decoder.decode(AirportsResponse.self, from: data)
-                    
-                print("\n\n")
-                dump(airportsResponse)
-                print("\n\n")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            let task = session.dataTask(with: url) { [self] data, response, error in
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                    return
+                }
                 
-                DispatchQueue.main.async {
-                    self.output.didGetAirports(list: airportsResponse)
+                guard let data = data else {
+                    print("No data")
+                    return
                 }
-            } catch {
-                DispatchQueue.main.async {
-                    self.output.didFailGettingAirports(title: self.titleFail, message: self.messageFail)
+                
+                
+                do {
+                    let decoder = JSONDecoder()
+                    
+                    let airportsResponse = try decoder.decode(AirportsResponse.self, from: data)
+                    
+                    print("\n\n")
+                    dump(airportsResponse)
+                    print("\n\n")
+                    
+                    DispatchQueue.main.async {
+                        self.output.didGetAirports(list: airportsResponse)
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.output.didFailGettingAirports(title: self.titleFail, message: self.messageFail)
+                    }
                 }
             }
+            task.resume()
         }
-        task.resume()
     }
 }
 

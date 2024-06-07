@@ -107,7 +107,6 @@ class HomeViewController: UIViewController {
 // MARK: HomeViewInput
 
 extension HomeViewController: HomeViewInput {
-    
     func setupInitialState() {}
     
     func showError(title: String, message: String) {
@@ -116,5 +115,13 @@ extension HomeViewController: HomeViewInput {
     
     func showErrorConfiguration(title: String, message: String) {
         showAlertConfiguration(title: title, message: message)
+    }
+    
+    func displayLoader() {
+        showLoader()
+    }
+    
+    func removeLoader() {
+        hideLoader()
     }
 }

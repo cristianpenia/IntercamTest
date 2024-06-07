@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class ShowMapViewController: UIViewController {
     
@@ -20,9 +21,11 @@ class ShowMapViewController: UIViewController {
     // MARK: Properties
     
     var output: ShowMapViewOutput!
-    
+    private let locationManager = CLLocationManager()
+
     
     // MARK: Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,10 +36,17 @@ class ShowMapViewController: UIViewController {
     
     private func setup() {
         airportsMapView.delegate = self
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        airportsMapView.showsUserLocation = true
     }
     
     func customMap(with airports: [Airport]) {
-        
         var airportsPoints = [CLLocationCoordinate2D]()
         
         for airport in airports {
@@ -50,11 +60,8 @@ class ShowMapViewController: UIViewController {
     
     private func addAnnotations(_ coordinates: [CLLocationCoordinate2D]) {
         for coordinate in coordinates {
-            
             let annotation = MKPointAnnotation()
-            
             annotation.coordinate = coordinate
-            
             airportsMapView.addAnnotation(annotation)
         }
     }
@@ -71,7 +78,7 @@ class ShowMapViewController: UIViewController {
             zoomRect = zoomRect.union(pointRect)
         }
         
-        airportsMapView.setVisibleMapRect(zoomRect, 
+        airportsMapView.setVisibleMapRect(zoomRect,
                                           edgePadding: UIEdgeInsets(top: 100,
                                                                     left: 100,
                                                                     bottom: 100,
@@ -84,7 +91,6 @@ class ShowMapViewController: UIViewController {
 // MARK: ShowMapViewInput
 
 extension ShowMapViewController: ShowMapViewInput {
-    
     func setupInitialState(airports: [Airport]) {
         customMap(with: airports)
     }
@@ -98,5 +104,30 @@ extension ShowMapViewController: ShowMapViewInput {
 // MARK: MKMapViewDelegate
 
 extension ShowMapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        zoomToFitAnnotations()
+    }
+}
+
+
+// MARK: CLLocationManagerDelegate
+
+extension ShowMapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse, .authorizedAlways:
+            locationManager.startUpdatingLocation()
+        case .denied, .restricted:
+            // TODO: Manejar el caso donde no hay permisos
+            break
+        default:
+            break
+        }
+    }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        
+        airportsMapView.setCenter(location.coordinate, animated: true)
+    }
 }

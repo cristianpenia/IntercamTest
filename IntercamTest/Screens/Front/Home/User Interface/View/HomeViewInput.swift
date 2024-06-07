@@ -11,4 +11,6 @@ protocol HomeViewInput: AnyObject {
     func setupInitialState()
     func showError(title: String, message: String)
     func showErrorConfiguration(title: String, message: String)
+    func displayLoader()
+    func removeLoader()
 }

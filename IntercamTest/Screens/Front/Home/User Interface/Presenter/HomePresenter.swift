@@ -24,6 +24,8 @@ extension HomePresenter: HomeModuleInput {
 extension HomePresenter: HomeViewOutput {
     
     func searchAirportIn(_ range: Int) {
+        view.displayLoader()
+        
         self.range = range
         
         interactor.getLocation()
@@ -45,14 +47,17 @@ extension HomePresenter: HomeInteractorOutput {
     }
     
     func didFailGettingLocation(title: String, message: String) {
+        view.removeLoader()
         view.showErrorConfiguration(title: title, message: message)
     }
     
     func didGetAirports(list: AirportsResponse) {
+        view.removeLoader()
         router.routeToListAirports(list: list)
     }
     
     func didFailGettingAirports(title: String, message: String) {
+        view.removeLoader()
         view.showError(title: title, message: message)
     }
 }
