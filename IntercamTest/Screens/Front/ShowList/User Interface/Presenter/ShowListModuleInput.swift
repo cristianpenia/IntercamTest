@@ -6,6 +6,6 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-protocol ShowListModuleInput: class {
-
+protocol ShowListModuleInput: AnyObject {
+    func initializeModule(airports: [Airport])
 }

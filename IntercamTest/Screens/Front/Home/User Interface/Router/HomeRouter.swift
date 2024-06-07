@@ -24,6 +24,8 @@ class HomeRouter: HomeRouterInput, Routable {
             let configurator = AirportsModuleConfigurator()
             
             configurator.configure(viewController: airports )
+            
+            airports.modelInput().initializeModule(airports: list)
         }
     }
 }

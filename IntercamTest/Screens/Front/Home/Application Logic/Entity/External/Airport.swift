@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Airpord
 
-struct Airpord: Decodable {
+struct Airport: Decodable {
     let ident, type, name: String
     let latitudeDeg, longitudeDeg: Double
     let elevationFt: Int

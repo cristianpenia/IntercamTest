@@ -17,7 +17,7 @@ class ShowListModuleConfigurator {
         }
     }
 
-    private func configure(viewController: ShowListViewController) {
+    func configure(viewController: ShowListViewController) {
 
         let router = ShowListRouter()
 

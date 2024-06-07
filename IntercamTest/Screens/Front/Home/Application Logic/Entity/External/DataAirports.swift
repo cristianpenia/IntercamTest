@@ -11,5 +11,5 @@ import Foundation
 // MARK: - DataAirports
 
 struct DataAirports: Decodable {
-    let airpords: [Airpord]
+    let airpords: [Airport]
 }

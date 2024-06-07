@@ -6,7 +6,7 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-class ShowListPresenter: ShowListModuleInput, ShowListViewOutput, ShowListInteractorOutput {
+class ShowListPresenter {
 
     weak var view: ShowListViewInput!
     var interactor: ShowListInteractorInput!
@@ -15,4 +15,27 @@ class ShowListPresenter: ShowListModuleInput, ShowListViewOutput, ShowListIntera
     func viewIsReady() {
 
     }
+}
+
+
+// MARK: ShowListModuleInput
+
+extension ShowListPresenter: ShowListModuleInput {
+    func initializeModule(airports: [Airport]) {
+        view.setupInitialState(airports: airports)
+    }
+}
+
+
+// MARK: ShowListViewOutput
+
+extension ShowListPresenter: ShowListViewOutput {
+    
+}
+
+
+// MARK: ShowListInteractorOutput
+
+extension ShowListPresenter: ShowListInteractorOutput {
+    
 }

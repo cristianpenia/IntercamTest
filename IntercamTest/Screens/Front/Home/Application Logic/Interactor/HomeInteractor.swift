@@ -18,7 +18,7 @@ class HomeInteractor: HomeInteractorInput {
     
     // TODO: pasar al archivo correspondiente
     let titleFail = "Ocurrio un error"
-    let messageFail = "lamentamos el no haber podido concretar tu peticion, intentalo nuevamente"
+    let messageFail = "lamentamos no haber podido concretar tu peticion, intentalo nuevamente"
     
     init(locationService: LocationService) {
         self.locationService = locationService
@@ -32,16 +32,17 @@ class HomeInteractor: HomeInteractorInput {
                 self.output.didGetLocation(location)
                 
             case .failure( _):
-                self.output.didFailGettingLocation(title: titleFail, message: messageFail)
+                self.output.didFailGettingLocation(title: titleFail, message: "Al botener la coordenadas \n\(messageFail)")
             }
         }
     }
     
     func getAirports(with latitude: Double, and longitude: Double, in range: Int) {
         
-        let apiKey = "47c3b837f99dcf882569930da69bbb9ec799f7eb9ebf40b3a32b4c1c776c9f62be777be7c8ad15a720a5f38ecd818559"
+        let apiKey = "47c3b837f99"
         
         let jsonData = loadJSONFromFile(named: "AirportsSuccess")
+//        let jsonData = loadJSONFromFile(named: "AirportsFailed")
         
         MockURLProtocol.requestHandler = { request in
             let response = HTTPURLResponse(
@@ -54,7 +55,6 @@ class HomeInteractor: HomeInteractorInput {
         }
         
         let session = setupMockedURLSession()
-        
         let baseURL = "https://airports.com/api/test"
         
         guard var urlComponents = URLComponents(string: baseURL) else {
@@ -74,6 +74,8 @@ class HomeInteractor: HomeInteractorInput {
             return
         }
         
+        print("\n\n\(url)\n\n")
+        
         let task = session.dataTask(with: url) { [self] data, response, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
@@ -91,21 +93,21 @@ class HomeInteractor: HomeInteractorInput {
                         
                 let airportsResponse = try decoder.decode(AirportsResponse.self, from: data)
                     
+                print("\n\n")
                 dump(airportsResponse)
+                print("\n\n")
                 
                 DispatchQueue.main.async {
                     self.output.didGetAirports(list: airportsResponse)
                 }
             } catch {
                 DispatchQueue.main.async {
-                    self.output.didFailGettingAirports(title: titleFail, message: self.messageFail)
+                    self.output.didFailGettingAirports(title: self.titleFail, message: self.messageFail)
                 }
             }
         }
         task.resume()
-        
     }
-
 }
 
 
@@ -126,6 +128,7 @@ extension HomeInteractor {
     func setupMockedURLSession() -> URLSession {
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [MockURLProtocol.self]
+        
         return URLSession(configuration: configuration)
     }
 }

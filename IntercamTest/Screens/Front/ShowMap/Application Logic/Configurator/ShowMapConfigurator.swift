@@ -17,7 +17,7 @@ class ShowMapModuleConfigurator {
         }
     }
 
-    private func configure(viewController: ShowMapViewController) {
+    func configure(viewController: ShowMapViewController) {
 
         let router = ShowMapRouter()
 

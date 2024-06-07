@@ -6,12 +6,6 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-protocol ShowListViewInput: class {
-
-    /**
-        @author Cristian Peña
-        Setup initial state of the view
-    */
-
-    func setupInitialState()
+protocol ShowListViewInput: AnyObject {
+    func setupInitialState(airports: [Airport])
 }

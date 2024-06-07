@@ -37,6 +37,9 @@
 		9486D53C83EDDA709733D3C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBEC597105BE803BED04A8 /* HomeViewController.swift */; };
 		A089CE53977CAB3A34B02360 /* ShowListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC52FCA1707DC0DFCC2EF7 /* ShowListConfigurator.swift */; };
 		A1A936F7B4552FF6884E8AE7 /* ShowListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B39943589051D42B636189 /* ShowListInteractor.swift */; };
+		A67BE7FA2C129489006E98B3 /* AirportInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67BE7F92C129489006E98B3 /* AirportInformationTableViewCell.swift */; };
+		A67BE7FD2C129596006E98B3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A67BE7FC2C129596006E98B3 /* SnapKit */; };
+		A67BE8002C12A553006E98B3 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67BE7FF2C12A553006E98B3 /* UIViewController+Extension.swift */; };
 		A69884AD2C10E02900170E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884AC2C10E02900170E90 /* AppDelegate.swift */; };
 		A69884AF2C10E02900170E90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69884AE2C10E02900170E90 /* SceneDelegate.swift */; };
 		A69884B42C10E02900170E90 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A69884B32C10E02900170E90 /* Base */; };
@@ -56,7 +59,7 @@
 		A69884FE2C1216BB00170E90 /* AirportsFailed.json in Resources */ = {isa = PBXBuildFile; fileRef = A69884FD2C1216BB00170E90 /* AirportsFailed.json */; };
 		A69885022C12360200170E90 /* AirportsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885012C12360200170E90 /* AirportsResponse.swift */; };
 		A69885042C12363100170E90 /* DataAirports.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885032C12363100170E90 /* DataAirports.swift */; };
-		A69885062C12364700170E90 /* Airpord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885052C12364700170E90 /* Airpord.swift */; };
+		A69885062C12364700170E90 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885052C12364700170E90 /* Airport.swift */; };
 		A69885082C1236CD00170E90 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69885072C1236CD00170E90 /* MockURLProtocol.swift */; };
 		A698850D2C12447700170E90 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A698850C2C12447700170E90 /* Routable.swift */; };
 		A727A9391B56C4D61C6283AF /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F3CAEF94052A570E64B18 /* HomeInitializer.swift */; };
@@ -126,6 +129,8 @@
 		97056052DE5C34614943758B /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		9EA5BE80C083B1C4E177F8A1 /* ShowListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShowListRouterInput.swift; sourceTree = "<group>"; };
 		A3B39943589051D42B636189 /* ShowListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShowListInteractor.swift; sourceTree = "<group>"; };
+		A67BE7F92C129489006E98B3 /* AirportInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportInformationTableViewCell.swift; sourceTree = "<group>"; };
+		A67BE7FF2C12A553006E98B3 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		A69884A92C10E02900170E90 /* IntercamTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntercamTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69884AC2C10E02900170E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A69884AE2C10E02900170E90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +154,7 @@
 		A69884FD2C1216BB00170E90 /* AirportsFailed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AirportsFailed.json; sourceTree = "<group>"; };
 		A69885012C12360200170E90 /* AirportsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsResponse.swift; sourceTree = "<group>"; };
 		A69885032C12363100170E90 /* DataAirports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAirports.swift; sourceTree = "<group>"; };
-		A69885052C12364700170E90 /* Airpord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airpord.swift; sourceTree = "<group>"; };
+		A69885052C12364700170E90 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		A69885072C1236CD00170E90 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A698850C2C12447700170E90 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		A87B3B69F7CB8D57A57B1E47 /* AirportsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AirportsViewInput.swift; sourceTree = "<group>"; };
@@ -178,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67BE7FD2C129596006E98B3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +279,7 @@
 		8595CA8755F06F5829D54663 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A67BE7F82C129477006E98B3 /* Cell */,
 				FF3E1CA91FD74C1F10137366 /* ShowListViewInput.swift */,
 				DF8F997016040DBC1EAF1D78 /* ShowListViewOutput.swift */,
 				CDA0359D377AEA0BFF880A95 /* ShowListViewController.swift */,
@@ -298,13 +305,20 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		A67BE7F82C129477006E98B3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A67BE7F92C129489006E98B3 /* AirportInformationTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A691DC0E4D99D2E876F08D47 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				6CB4744502F5EF99732C1654 /* HomeInteractor.swift */,
 				E5A7E7BED870277327F22A15 /* HomeInteractorInput.swift */,
 				509E23C5E43C3A6EF64E2C65 /* HomeInteractorOutput.swift */,
-				A69885072C1236CD00170E90 /* MockURLProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -434,6 +448,7 @@
 				A69884E42C10F4B900170E90 /* Coordinators */,
 				A69884ED2C1102F900170E90 /* Color.swift */,
 				A698850C2C12447700170E90 /* Routable.swift */,
+				A69885072C1236CD00170E90 /* MockURLProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -451,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				A69884F02C1103A800170E90 /* UIColor+Extension.swift */,
+				A67BE7FF2C12A553006E98B3 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -486,7 +502,7 @@
 			children = (
 				A69885012C12360200170E90 /* AirportsResponse.swift */,
 				A69885032C12363100170E90 /* DataAirports.swift */,
-				A69885052C12364700170E90 /* Airpord.swift */,
+				A69885052C12364700170E90 /* Airport.swift */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -678,6 +694,9 @@
 			dependencies = (
 			);
 			name = IntercamTest;
+			packageProductDependencies = (
+				A67BE7FC2C129596006E98B3 /* SnapKit */,
+			);
 			productName = IntercamTest;
 			productReference = A69884A92C10E02900170E90 /* IntercamTest.app */;
 			productType = "com.apple.product-type.application";
@@ -752,6 +771,7 @@
 			mainGroup = A69884A02C10E02900170E90;
 			packageReferences = (
 				A69884F72C12006700170E90 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A67BE7FB2C129595006E98B3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = A69884AA2C10E02900170E90 /* Products */;
 			projectDirPath = "";
@@ -809,7 +829,7 @@
 				A69884AD2C10E02900170E90 /* AppDelegate.swift in Sources */,
 				A69884AF2C10E02900170E90 /* SceneDelegate.swift in Sources */,
 				C8F768F987B13721627F6C4F /* HomeViewInput.swift in Sources */,
-				A69885062C12364700170E90 /* Airpord.swift in Sources */,
+				A69885062C12364700170E90 /* Airport.swift in Sources */,
 				E43C5EA482A45BA84EFF7B11 /* HomeViewOutput.swift in Sources */,
 				9486D53C83EDDA709733D3C9 /* HomeViewController.swift in Sources */,
 				51524CBCA2C9598401B2F774 /* HomeModuleInput.swift in Sources */,
@@ -823,6 +843,7 @@
 				A69884F62C112EDC00170E90 /* LocationService.swift in Sources */,
 				A69885042C12363100170E90 /* DataAirports.swift in Sources */,
 				BE582FC929CE172EDA683138 /* HomeConfigurator.swift in Sources */,
+				A67BE7FA2C129489006E98B3 /* AirportInformationTableViewCell.swift in Sources */,
 				A727A9391B56C4D61C6283AF /* HomeInitializer.swift in Sources */,
 				FCD78B29888EDD076358E7A5 /* AirportsViewInput.swift in Sources */,
 				0BFC5B6DA55B97C61BD848C9 /* AirportsViewOutput.swift in Sources */,
@@ -848,6 +869,7 @@
 				3D1A201DE5A4F18D1B378AEB /* ShowMapRouter.swift in Sources */,
 				AD15BEA6CE911DDE4CD2A5C6 /* ShowMapConfigurator.swift in Sources */,
 				DB5FED9ED9F12A057D8CB3F9 /* ShowMapInitializer.swift in Sources */,
+				A67BE8002C12A553006E98B3 /* UIViewController+Extension.swift in Sources */,
 				69CB16FA96339581DD2BB2F3 /* ShowListViewInput.swift in Sources */,
 				8F11019F893B8474C72AC44E /* ShowListViewOutput.swift in Sources */,
 				42B3BA114D505A948B12C398 /* ShowListViewController.swift in Sources */,
@@ -1046,11 +1068,13 @@
 				INFOPLIST_FILE = IntercamTest/AppSettings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Aeropuertos;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Esta aplicación necesita su ubicación para proporcionar la mejor función según la ubicación";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta aplicación necesita su ubicación para proporcionar la mejor función según la ubicación";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1077,11 +1101,13 @@
 				INFOPLIST_FILE = IntercamTest/AppSettings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Aeropuertos;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Esta aplicación necesita su ubicación para proporcionar la mejor función según la ubicación";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta aplicación necesita su ubicación para proporcionar la mejor función según la ubicación";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1214,6 +1240,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A67BE7FB2C129595006E98B3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 		A69884F72C12006700170E90 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1223,6 +1257,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A67BE7FC2C129596006E98B3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A67BE7FB2C129595006E98B3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A69884A12C10E02900170E90 /* Project object */;
 }

@@ -8,23 +8,25 @@
 
 import CoreLocation
 
-class HomePresenter: HomeModuleInput {
+class HomePresenter {
 
     weak var view: HomeViewInput!
     var interactor: HomeInteractorInput!
     var router: HomeRouterInput!
     var range = 0
+    
+}
 
+extension HomePresenter: HomeModuleInput {
     func viewIsReady() {}
 }
 
 extension HomePresenter: HomeViewOutput {
     
     func searchAirportIn(_ range: Int) {
-        
         self.range = range
-        interactor.getLocation()
         
+        interactor.getLocation()
     }
 }
 
@@ -35,7 +37,7 @@ extension HomePresenter: HomeInteractorOutput {
         let latitud = location.coordinate.latitude
         let longitud = location.coordinate.longitude
         
-        print("latitud \(latitud), longitud \(longitud)")
+        print("\n\nlatitud \(latitud), longitud \(longitud)\n\n")
         
         interactor.getAirports(with: latitud, and: longitud, in: range)
         
@@ -43,17 +45,14 @@ extension HomePresenter: HomeInteractorOutput {
     }
     
     func didFailGettingLocation(title: String, message: String) {
-        // TODO: mostramos un alert por el fallo
-        print("\(title)\n\(message)")
+        view.showErrorConfiguration(title: title, message: message)
     }
     
     func didGetAirports(list: AirportsResponse) {
-        // TODO: una vez obtenida la repuesta exitosa mandamos la informacion por router
         router.routeToListAirports(list: list)
     }
     
     func didFailGettingAirports(title: String, message: String) {
-        // TODO: mostramos un alert por el fallo
-        print("\(title)\n\(message)")
+        view.showError(title: title, message: message)
     }
 }

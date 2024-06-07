@@ -6,13 +6,40 @@
 //  Copyright © 2024 IntercamTest. All rights reserved.
 //
 
-class ShowMapPresenter: ShowMapModuleInput, ShowMapViewOutput, ShowMapInteractorOutput {
+class ShowMapPresenter {
 
     weak var view: ShowMapViewInput!
     var interactor: ShowMapInteractorInput!
     var router: ShowMapRouterInput!
 
-    func viewIsReady() {
+    var airports: [Airport]?
+}
 
+
+// MARK: ShowMapModuleInput
+
+extension ShowMapPresenter: ShowMapModuleInput {
+    
+    func initializeModule(airports: [Airport]) {
+        self.airports = airports
     }
+}
+
+
+// MARK: ShowMapViewOutput
+
+extension ShowMapPresenter: ShowMapViewOutput {
+    
+    func viewIsReady() {
+        guard let airports else { return }
+        
+        view.setupInitialState(airports: airports)
+    }
+}
+
+
+// MARK: ShowMapInteractorOutput
+
+extension ShowMapPresenter: ShowMapInteractorOutput {
+    
 }
